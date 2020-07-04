@@ -1,4 +1,6 @@
+.DS_Store
+.zsh_plugins.sh
 dracula-iterm-theme
 dracula-term-theme
+dracula-zsh-theme
 d2codingfont
-.zsh_plugins.sh

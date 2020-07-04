@@ -2,4 +2,5 @@ zdharma/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
-robbyrussell/oh-my-zsh path:plugins/react-native
+ohmyzsh/ohmyzsh path:plugins/react-native
+ohmyzsh/ohmyzsh path:plugins/npm
