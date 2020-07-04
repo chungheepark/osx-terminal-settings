@@ -5,6 +5,10 @@ ITERM_THEME='dracula-iterm-theme'
 TERM_THEME='dracula-term-theme'
 ZSH_THEME='dracula-zsh-theme'
 D2_CODING_FONT='d2codingfont'
+FAST_SYNTAX='fast-syntax-highlighting'
+HISTORY_SEARCH='zsh-history-substring-search'
+COMPLETIONS='zsh-completions'
+AUTOSUGGEST='zsh-autosuggestions'
 
 echo "clear home files"
 rm -rf ~/.alias.sh
@@ -49,10 +53,20 @@ git clone https://github.com/dracula/iterm.git $ITERM_THEME
 git clone https://github.com/dracula/terminal-app.git $TERM_THEME
 git clone https://github.com/naver/d2codingfont.git $D2_CODING_FONT
 git clone https://github.com/dracula/zsh.git $ZSH_THEME
+git clone https://github.com/zdharma/fast-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions
+
+echo "link dependency"
 
 ln -sf $(pwd)/.alias.sh ~/.alias.sh
 ln -sf $(pwd)/.exports.sh ~/.exports.sh
-ln -sf $(pwd)/$ZSH_THEME/*.zsh-theme ~/.oh-my-zsh/custom/themes
+ln -sf $(pwd)/$ZSH_THEME/*.zsh-theme $ZSH_CUSTOM/themes
+ln -sf $(pwd)/$FAST_SYNTAX $ZSH_CUSTOM/plugins
+ln -sf $(pwd)/$HISTORY_SEARCH $ZSH_CUSTOM/plugins
+ln -sf $(pwd)/$COMPLETIONS $ZSH_CUSTOM/plugins
+ln -sf $(pwd)/$AUTOSUGGEST $ZSH_CUSTOM/plugins
 ln -sf $(pwd)/.zshrc ~/.zshrc
 
 exec zsh
